@@ -19,11 +19,15 @@ namespace Forms
 		find(kIncorporeal, own.incorporeal);
 		find(kNotIncorporeal, own.notIncorporeal);
 		find(kPassThroughSound, own.passThrough);
+		find(kCoatingEffect, own.coatingEffect);
+		find(kPoison, own.poison);
+		find(kRecipe, own.recipe);
 		if (!data->LookupModByName(kPlugin)) {
 			logs::warn("{} is not loaded: no pass-through sound, the IG_ keywords don't exist", kPlugin);
 		} else {
-			logs::info("{}: keywords {}/{}/{}, sound {}", kPlugin, own.ghostWeapon != nullptr, own.incorporeal != nullptr,
-				own.notIncorporeal != nullptr, own.passThrough != nullptr);
+			logs::info("{}: keywords {}/{}/{}, sound {}, Spectral Poison {}/{}/{}", kPlugin, own.ghostWeapon != nullptr,
+				own.incorporeal != nullptr, own.notIncorporeal != nullptr, own.passThrough != nullptr, own.poison != nullptr,
+				own.coatingEffect != nullptr, own.recipe != nullptr);
 		}
 		witcherSigns = data->LookupModByName(kWitcherSigns) != nullptr;
 		if (!witcherSigns) {

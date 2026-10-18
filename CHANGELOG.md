@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.0
+
+- Spectral Poison: coat your weapon and for 12 seconds it hurts ghosts anywhere (melee, and arrows from a coated bow).
+  It runs on its own fixed timer, independent of vanilla poisons: no charges, poison perks don't change it, and its
+  effect never reaches anyone. Sold by apothecaries together with its recipe; with the recipe read, brew it at an
+  alchemy lab from Ectoplasm, Salt Pile and Deathbell. The coated weapon glows while drawn
+- Silver weapons and Dawnbreaker are options of their own (menu and ini, on by default)
+- Dawnbreaker is recognized by the weapon itself and by the enchantment it has in your load order, so mods that change
+  it (Zim's Immersive Artifacts...) or add their own versions with that enchantment work
+
 ## 1.0
 
 First release.

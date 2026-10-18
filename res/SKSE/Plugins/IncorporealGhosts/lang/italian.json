@@ -2,7 +2,7 @@
 	"Works as in vanilla": "Funziona come nel gioco base",
 	"Damage, drain and stagger do nothing": "Danni, prosciugamenti e barcollamenti non hanno effetto",
 	"No hostile magic works": "Nessuna magia ostile funziona",
-	"Silver weapons, Ghostblade and Dawnbreaker always hurt ghosts.": "Le armi d'argento, la Lama spettrale e Alba feriscono sempre i fantasmi.",
+	"Ghostblade always hurts ghosts.": "La Lama spettrale ferisce sempre i fantasmi.",
 	"ordinary": "comune",
 	"Load a game to see the status.": "Carica una partita per vedere lo stato.",
 	"W3S.esl is loaded": "W3S.esl è caricato",
@@ -62,5 +62,16 @@
 	"friendly (solid)": "amichevole (solido)",
 	"revealed (vulnerable)": "rivelato (vulnerabile)",
 	"in Yrden (vulnerable)": "in Yrden (vulnerabile)",
-	"incorporeal": "incorporeo"
+	"incorporeal": "incorporeo",
+	"Spectral Poison: {:.0f} s": "Veleno spettrale: {:.0f} s",
+	"Spectral Poison": "Veleno spettrale",
+	"Recipe: Spectral Poison": "Ricetta: veleno spettrale",
+	"The spectral coating has faded.": "Il rivestimento spettrale è svanito.",
+	"{} can strike ghosts for {:.0f} seconds.": "{} può colpire i fantasmi per {:.0f} secondi.",
+	"{} brewed.": "{} preparato.",
+	"For {:.0f} seconds the poisoned weapon strikes ghosts and Wispmothers as if they had a body.": "Per {:.0f} secondi l'arma avvelenata colpisce fantasmi e Madri delle fiammelle come se avessero un corpo.",
+	"Silver weapons count": "Contano le armi d'argento",
+	"Every weapon and ammo made of silver (WeapMaterialSilver): Silver Sword, Silver Greatsword, Bloodskal Blade, modded silver weapons.": "Ogni arma e munizione d'argento (WeapMaterialSilver): spada d'argento, spadone d'argento, Lama di Bloodskal, armi d'argento delle mod.",
+	"Dawnbreaker counts": "Conta Alba",
+	"Also when a mod changes its enchantment or adds its own versions of it with the same enchantment (Zim's Immersive Artifacts...).": "Anche quando una mod cambia il suo incantamento o aggiunge sue versioni con lo stesso incantamento (Zim's Immersive Artifacts...)."
 }

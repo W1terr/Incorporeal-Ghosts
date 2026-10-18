@@ -3,6 +3,7 @@
 #include "Hooks.h"
 #include "Lang.h"
 #include "Menu.h"
+#include "Poison.h"
 #include "Settings.h"
 #include "Visuals.h"
 #include "Yrden.h"
@@ -35,14 +36,17 @@ namespace
 			Detect::Init();
 			Visuals::Init();
 			Lang::Set(Settings::Get().language);
+			Poison::Init();
 			Menu::Register();
 			break;
 		case SKSE::MessagingInterface::kPreLoadGame:
 			Yrden::Reset();
+			Poison::Reset();
 			break;
 		case SKSE::MessagingInterface::kPostLoadGame:
 		case SKSE::MessagingInterface::kNewGame:
 			Yrden::Reset();
+			Poison::Reset();
 			if (!warned && !Forms::WitcherSignsLoaded()) {
 				warned = true;
 				RE::SendHUDMessage::ShowHUDMessage(Lang::T("Incorporeal Ghosts: The Witcher Signs is missing, only ghost weapons can hurt ghosts."));

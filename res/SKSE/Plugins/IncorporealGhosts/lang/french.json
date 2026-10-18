@@ -2,7 +2,7 @@
 	"Works as in vanilla": "Fonctionne comme dans le jeu de base",
 	"Damage, drain and stagger do nothing": "Les dégâts, drains et chancellements sont sans effet",
 	"No hostile magic works": "Aucune magie hostile ne fonctionne",
-	"Silver weapons, Ghostblade and Dawnbreaker always hurt ghosts.": "Les armes en argent, la Lame fantôme et Aube blessent toujours les fantômes.",
+	"Ghostblade always hurts ghosts.": "La Lame fantôme blesse toujours les fantômes.",
 	"ordinary": "ordinaire",
 	"Load a game to see the status.": "Chargez une partie pour voir l'état.",
 	"W3S.esl is loaded": "W3S.esl est chargé",
@@ -62,5 +62,16 @@
 	"friendly (solid)": "amical (matériel)",
 	"revealed (vulnerable)": "révélé (vulnérable)",
 	"in Yrden (vulnerable)": "dans Yrden (vulnérable)",
-	"incorporeal": "immatériel"
+	"incorporeal": "immatériel",
+	"Spectral Poison: {:.0f} s": "Poison spectral : {:.0f} s",
+	"Spectral Poison": "Poison spectral",
+	"Recipe: Spectral Poison": "Recette : poison spectral",
+	"The spectral coating has faded.": "L'enduit spectral s'est dissipé.",
+	"{} can strike ghosts for {:.0f} seconds.": "{} peut frapper les fantômes pendant {:.0f} secondes.",
+	"{} brewed.": "{} préparé.",
+	"For {:.0f} seconds the poisoned weapon strikes ghosts and Wispmothers as if they had a body.": "Pendant {:.0f} secondes, l'arme empoisonnée frappe les fantômes et les Mères feux-follets comme s'ils avaient un corps.",
+	"Silver weapons count": "Les armes en argent comptent",
+	"Every weapon and ammo made of silver (WeapMaterialSilver): Silver Sword, Silver Greatsword, Bloodskal Blade, modded silver weapons.": "Toute arme et munition en argent (WeapMaterialSilver) : épée en argent, épée à deux mains en argent, Lame de Bloodskal, armes en argent de mods.",
+	"Dawnbreaker counts": "Aube compte",
+	"Also when a mod changes its enchantment or adds its own versions of it with the same enchantment (Zim's Immersive Artifacts...).": "Même quand un mod change son enchantement ou ajoute ses propres versions avec le même enchantement (Zim's Immersive Artifacts...)."
 }

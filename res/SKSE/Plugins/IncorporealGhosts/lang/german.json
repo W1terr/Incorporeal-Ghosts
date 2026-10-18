@@ -2,7 +2,7 @@
 	"Works as in vanilla": "Wie im Grundspiel",
 	"Damage, drain and stagger do nothing": "Schaden, Entzug und Taumeln wirken nicht",
 	"No hostile magic works": "Keine feindliche Magie wirkt",
-	"Silver weapons, Ghostblade and Dawnbreaker always hurt ghosts.": "Silberwaffen, Geisterklinge und Dämmerbrecher verletzen Geister immer.",
+	"Ghostblade always hurts ghosts.": "Die Geisterklinge verletzt Geister immer.",
 	"ordinary": "gewöhnlich",
 	"Load a game to see the status.": "Lade einen Spielstand, um den Status zu sehen.",
 	"W3S.esl is loaded": "W3S.esl ist geladen",
@@ -62,5 +62,16 @@
 	"friendly (solid)": "freundlich (fest)",
 	"revealed (vulnerable)": "enthüllt (verwundbar)",
 	"in Yrden (vulnerable)": "in Yrden (verwundbar)",
-	"incorporeal": "körperlos"
+	"incorporeal": "körperlos",
+	"Spectral Poison: {:.0f} s": "Geistergift: {:.0f} s",
+	"Spectral Poison": "Geistergift",
+	"Recipe: Spectral Poison": "Rezept: Geistergift",
+	"The spectral coating has faded.": "Der geisterhafte Überzug ist verflogen.",
+	"{} can strike ghosts for {:.0f} seconds.": "{} kann {:.0f} Sekunden lang Geister treffen.",
+	"{} brewed.": "{} gebraut.",
+	"For {:.0f} seconds the poisoned weapon strikes ghosts and Wispmothers as if they had a body.": "{:.0f} Sekunden lang trifft die vergiftete Waffe Geister und Irrlichtmütter, als hätten sie einen Körper.",
+	"Silver weapons count": "Silberwaffen zählen",
+	"Every weapon and ammo made of silver (WeapMaterialSilver): Silver Sword, Silver Greatsword, Bloodskal Blade, modded silver weapons.": "Jede Waffe und Munition aus Silber (WeapMaterialSilver): Silberschwert, Silber-Großschwert, Bloodskal-Klinge, Silberwaffen aus Mods.",
+	"Dawnbreaker counts": "Dämmerbrecher zählt",
+	"Also when a mod changes its enchantment or adds its own versions of it with the same enchantment (Zim's Immersive Artifacts...).": "Auch wenn eine Mod seine Verzauberung ändert oder eigene Versionen mit derselben Verzauberung hinzufügt (Zim's Immersive Artifacts...)."
 }

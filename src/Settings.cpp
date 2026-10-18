@@ -116,6 +116,8 @@ namespace Settings
 					Bool(e, "general.baffectfollowers", values.affectFollowers);
 					Bool(e, "general.baffectsummons", values.affectSummons);
 					Magic(e, "general.imagicimmunity", values.magic);
+					Bool(e, "general.bsilverweapons", values.silverWeapons);
+					Bool(e, "general.bdawnbreaker", values.dawnbreaker);
 					Bool(e, "general.bundeadbane", values.undeadBane);
 					Bool(e, "general.bboundweapons", values.boundWeapons);
 					Bool(e, "general.bpassthroughsound", values.sound);
@@ -125,6 +127,11 @@ namespace Settings
 					Number(e, "general.fyrdenabove", values.yrdenAbove, 0.0f, 2000.0f);
 					Number(e, "general.fyrdenbelow", values.yrdenBelow, 0.0f, 2000.0f);
 					Bool(e, "general.bdebuglog", values.debugLog);
+					Number(e, "general.fpoisonduration", values.poisonDuration, 1.0f, 600.0f);
+					float vendorPoisons = static_cast<float>(values.vendorPoisons);
+					Number(e, "general.ivendorpoisons", vendorPoisons, 0.0f, 20.0f);
+					values.vendorPoisons = static_cast<int>(vendorPoisons);
+					Bool(e, "general.bvendorrecipe", values.vendorRecipe);
 					if (e.key == "general.slanguage" && !e.value.empty()) {
 						values.language = Lower(e.value);
 					}
@@ -138,6 +145,8 @@ namespace Settings
 				List(e, "exclude.races", lists.excludeRaces);
 				List(e, "exclude.actors", lists.excludeActors);
 				List(e, "ghostweapons.keywords", lists.weaponKeywords);
+				List(e, "ghostweapons.silverkeywords", lists.silverKeywords);
+				List(e, "ghostweapons.dawnbreaker", lists.dawnbreaker);
 				List(e, "ghostweapons.weapons", lists.weapons);
 				List(e, "ghostweapons.enchantments", lists.enchantments);
 				List(e, "ghostweapons.enchantmenteffects", lists.enchantmentEffects);
@@ -147,6 +156,8 @@ namespace Settings
 				List(e, "yrden.revealeffects", lists.revealEffects);
 				List(e, "magic.allowedkeywords", lists.magicKeywords);
 				List(e, "visuals.revealshader", lists.revealShaders);
+				List(e, "poison.ingredients", lists.poisonIngredients);
+				List(e, "poison.weaponshader", lists.poisonShader);
 			}
 		}
 
@@ -170,6 +181,8 @@ namespace Settings
 				{ "bAffectFollowers", values.affectFollowers ? "1" : "0" },
 				{ "bAffectSummons", values.affectSummons ? "1" : "0" },
 				{ "iMagicImmunity", std::to_string(static_cast<int>(values.magic)) },
+				{ "bSilverWeapons", values.silverWeapons ? "1" : "0" },
+				{ "bDawnbreaker", values.dawnbreaker ? "1" : "0" },
 				{ "bUndeadBane", values.undeadBane ? "1" : "0" },
 				{ "bBoundWeapons", values.boundWeapons ? "1" : "0" },
 				{ "bPassThroughSound", values.sound ? "1" : "0" },
@@ -180,6 +193,9 @@ namespace Settings
 				{ "fYrdenBelow", Format(values.yrdenBelow) },
 				{ "bDebugLog", values.debugLog ? "1" : "0" },
 				{ "sLanguage", values.language },
+				{ "fPoisonDuration", Format(values.poisonDuration) },
+				{ "iVendorPoisons", std::to_string(values.vendorPoisons) },
+				{ "bVendorRecipe", values.vendorRecipe ? "1" : "0" },
 			};
 		}
 	}

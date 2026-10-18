@@ -3,6 +3,7 @@
 #include "Detect.h"
 #include "Feedback.h"
 #include "Forms.h"
+#include "Poison.h"
 #include "Settings.h"
 #include "Yrden.h"
 
@@ -224,6 +225,9 @@ namespace Ghosts
 	bool EffectApplies(RE::Actor* a_target, const RE::MagicTarget::AddTargetData& a_data)
 	{
 		const auto* effect = a_data.effect ? a_data.effect->baseEffect : nullptr;
+		if (Poison::IsCoatingEffect(effect)) {
+			return false;  // the Spectral Poison works on the weapon, its effect never reaches anyone
+		}
 		if (!effect || (!effect->IsHostile() && !effect->IsDetrimental()) || a_data.caster == a_target) {
 			return true;
 		}

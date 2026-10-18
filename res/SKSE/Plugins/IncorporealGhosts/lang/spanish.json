@@ -2,7 +2,7 @@
 	"Works as in vanilla": "Funciona como en el juego base",
 	"Damage, drain and stagger do nothing": "El daño, el drenaje y el aturdimiento no hacen nada",
 	"No hostile magic works": "Ninguna magia hostil funciona",
-	"Silver weapons, Ghostblade and Dawnbreaker always hurt ghosts.": "Las armas de plata, la Hoja fantasmal y Rompealbas siempre hieren a los fantasmas.",
+	"Ghostblade always hurts ghosts.": "La Hoja fantasmal siempre hiere a los fantasmas.",
 	"ordinary": "corriente",
 	"Load a game to see the status.": "Carga una partida para ver el estado.",
 	"W3S.esl is loaded": "W3S.esl está cargado",
@@ -62,5 +62,16 @@
 	"friendly (solid)": "amistoso (sólido)",
 	"revealed (vulnerable)": "revelado (vulnerable)",
 	"in Yrden (vulnerable)": "en Yrden (vulnerable)",
-	"incorporeal": "incorpóreo"
+	"incorporeal": "incorpóreo",
+	"Spectral Poison: {:.0f} s": "Veneno espectral: {:.0f} s",
+	"Spectral Poison": "Veneno espectral",
+	"Recipe: Spectral Poison": "Receta: veneno espectral",
+	"The spectral coating has faded.": "La capa espectral se ha desvanecido.",
+	"{} can strike ghosts for {:.0f} seconds.": "{} puede golpear a los fantasmas durante {:.0f} segundos.",
+	"{} brewed.": "{} preparado.",
+	"For {:.0f} seconds the poisoned weapon strikes ghosts and Wispmothers as if they had a body.": "Durante {:.0f} segundos, el arma envenenada golpea a fantasmas y madres fuego fatuo como si tuvieran cuerpo.",
+	"Silver weapons count": "Cuentan las armas de plata",
+	"Every weapon and ammo made of silver (WeapMaterialSilver): Silver Sword, Silver Greatsword, Bloodskal Blade, modded silver weapons.": "Toda arma y munición de plata (WeapMaterialSilver): espada de plata, mandoble de plata, Hoja de Bloodskal, armas de plata de mods.",
+	"Dawnbreaker counts": "Cuenta Rompealbas",
+	"Also when a mod changes its enchantment or adds its own versions of it with the same enchantment (Zim's Immersive Artifacts...).": "También si un mod cambia su encantamiento o añade sus propias versiones con el mismo encantamiento (Zim's Immersive Artifacts...)."
 }

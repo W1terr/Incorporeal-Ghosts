@@ -2,7 +2,7 @@
 	"Works as in vanilla": "Как в обычной игре",
 	"Damage, drain and stagger do nothing": "Урон, вытягивание и ошеломление не действуют",
 	"No hostile magic works": "Никакая враждебная магия не действует",
-	"Silver weapons, Ghostblade and Dawnbreaker always hurt ghosts.": "Серебряное оружие, Призрачный клинок и Рассвет всегда ранят призраков.",
+	"Ghostblade always hurts ghosts.": "Призрачный клинок всегда ранит призраков.",
 	"ordinary": "обычное",
 	"Load a game to see the status.": "Загрузите игру, чтобы увидеть состояние.",
 	"W3S.esl is loaded": "W3S.esl загружен",
@@ -62,5 +62,16 @@
 	"friendly (solid)": "дружелюбен (осязаем)",
 	"revealed (vulnerable)": "раскрыт (уязвим)",
 	"in Yrden (vulnerable)": "в Ирдене (уязвим)",
-	"incorporeal": "бесплотен"
+	"incorporeal": "бесплотен",
+	"Spectral Poison: {:.0f} s": "Призрачный яд: {:.0f} с",
+	"Spectral Poison": "Призрачный яд",
+	"Recipe: Spectral Poison": "Рецепт: призрачный яд",
+	"The spectral coating has faded.": "Призрачное покрытие рассеялось.",
+	"{} can strike ghosts for {:.0f} seconds.": "{} может ранить призраков ещё {:.0f} с.",
+	"{} brewed.": "Сварено: {}.",
+	"For {:.0f} seconds the poisoned weapon strikes ghosts and Wispmothers as if they had a body.": "В течение {:.0f} с отравленное оружие ранит призраков и матерей огоньков, будто у них есть тело.",
+	"Silver weapons count": "Серебряное оружие считается",
+	"Every weapon and ammo made of silver (WeapMaterialSilver): Silver Sword, Silver Greatsword, Bloodskal Blade, modded silver weapons.": "Любое оружие и боеприпасы из серебра (WeapMaterialSilver): серебряный меч, серебряный двуручный меч, Клинок Бладскаля, серебряное оружие из модов.",
+	"Dawnbreaker counts": "Рассвет считается",
+	"Also when a mod changes its enchantment or adds its own versions of it with the same enchantment (Zim's Immersive Artifacts...).": "Даже если мод меняет его зачарование или добавляет свои версии с тем же зачарованием (Zim's Immersive Artifacts...)."
 }

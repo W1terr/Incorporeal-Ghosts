@@ -13,6 +13,7 @@
 #include "Forms.h"
 #include "Ghosts.h"
 #include "Lang.h"
+#include "Poison.h"
 #include "Settings.h"
 #include "Yrden.h"
 
@@ -82,7 +83,11 @@ namespace Menu
 			Hint("Spells and shouts that would have no effect fly straight through. Fear, paralysis, Turn Undead and similar still work with the default setting. Inside Yrden everything works.");
 
 			Heading("Ghost weapons");
-			TextWrapped("%s", T("Silver weapons, Ghostblade and Dawnbreaker always hurt ghosts."));
+			TextWrapped("%s", T("Ghostblade always hurts ghosts."));
+			Checkbox(Id("Silver weapons count").c_str(), &s.silverWeapons);
+			Hint("Every weapon and ammo made of silver (WeapMaterialSilver): Silver Sword, Silver Greatsword, Bloodskal Blade, modded silver weapons.");
+			Checkbox(Id("Dawnbreaker counts").c_str(), &s.dawnbreaker);
+			Hint("Also when a mod changes its enchantment or adds its own versions of it with the same enchantment (Zim's Immersive Artifacts...).");
 			Checkbox(Id("Undead bane enchantments count").c_str(), &s.undeadBane);
 			Hint("Weapons enchanted with Turn Undead (Blessed / Sanctified / Holy...), Red Eagle's Bane, Auriel's Bow.");
 			Checkbox(Id("Bound weapons count").c_str(), &s.boundWeapons);
@@ -121,6 +126,10 @@ namespace Menu
 			}
 			Text("%s: %s", T(a_hand), Forms::Name(object).c_str());
 			Verdict(Detect::HandHasGhostWeapon(a_player, a_left), "ghost weapon");
+			if (const float left = Poison::Remaining(a_left); left > 0.0f) {
+				SameLine();
+				TextColored(kGhostly, "%s", F("Spectral Poison: {:.0f} s", left).c_str());
+			}
 		}
 
 		void __stdcall RenderStatus()
@@ -244,6 +253,7 @@ namespace Menu
 			}
 			if (changed) {
 				Lang::Set(s.language);
+				Poison::ApplyNames();
 				RenamePages();
 			}
 			Spacing();

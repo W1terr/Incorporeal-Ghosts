@@ -10,6 +10,9 @@ namespace Forms
 	inline constexpr RE::FormID kIncorporeal = 0x801;
 	inline constexpr RE::FormID kNotIncorporeal = 0x802;
 	inline constexpr RE::FormID kPassThroughSound = 0x803;
+	inline constexpr RE::FormID kCoatingEffect = 0x804;
+	inline constexpr RE::FormID kPoison = 0x805;
+	inline constexpr RE::FormID kRecipe = 0x806;
 
 	struct Own
 	{
@@ -17,6 +20,9 @@ namespace Forms
 		RE::BGSKeyword*            incorporeal{ nullptr };
 		RE::BGSKeyword*            notIncorporeal{ nullptr };
 		RE::BGSSoundDescriptorForm* passThrough{ nullptr };
+		RE::EffectSetting*         coatingEffect{ nullptr };
+		RE::AlchemyItem*           poison{ nullptr };
+		RE::TESObjectBOOK*         recipe{ nullptr };
 	};
 
 	void       Load();

@@ -1,6 +1,7 @@
 #include "Detect.h"
 
 #include "Forms.h"
+#include "Poison.h"
 #include "Settings.h"
 
 namespace Detect
@@ -18,6 +19,9 @@ namespace Detect
 			std::vector<RE::BGSKeyword*> ghostKeywords;
 			std::vector<RE::BGSKeyword*> excludeKeywords;
 			std::vector<RE::BGSKeyword*> weaponKeywords;
+			std::vector<RE::BGSKeyword*> silverKeywords;
+			Set<RE::TESForm>             dawnbreakerWeapons;
+			Set<RE::EnchantmentItem>     dawnbreakerEnchantments;
 			std::vector<RE::BGSKeyword*> effectKeywords;
 			std::vector<RE::BGSKeyword*> magicKeywords;
 			Set<RE::TESRace>             ghostRaces;
@@ -213,6 +217,23 @@ namespace Detect
 			}
 		}
 		data.enchantments = ToSet(Forms::ResolveAll<RE::EnchantmentItem>(l.enchantments, "Ghost enchantment"));
+
+		// Dawnbreaker: the weapon itself, and the enchantment it has in this load order (mods like Zim's Immersive
+		// Artifacts replace it, and give the same enchantment to their own versions of the sword)
+		data.silverKeywords = Forms::ResolveAll<RE::BGSKeyword>(l.silverKeywords, "Silver keyword");
+		for (auto* form : Forms::ResolveAll<RE::TESForm>(l.dawnbreaker, "Dawnbreaker")) {
+			if (auto* weapon = form->As<RE::TESObjectWEAP>(); weapon) {
+				data.dawnbreakerWeapons.insert(weapon);
+				if (weapon->formEnchanting) {
+					data.dawnbreakerEnchantments.insert(weapon->formEnchanting);
+				}
+			} else if (auto* enchantment = form->As<RE::EnchantmentItem>(); enchantment) {
+				data.dawnbreakerEnchantments.insert(enchantment);
+			}
+		}
+		for (const auto* enchantment : data.dawnbreakerEnchantments) {
+			logs::info("Dawnbreaker enchantment: {} [{:08X}]", Forms::Name(enchantment), enchantment->GetFormID());
+		}
 		data.enchantmentEffects = ToSet(Forms::ResolveAll<RE::EffectSetting>(l.enchantmentEffects, "Ghost enchantment effect"));
 
 		data.revealEffects = Forms::ResolveAll<RE::EffectSetting>(l.revealEffects, "Reveal effect");
@@ -224,9 +245,9 @@ namespace Detect
 		logs::info("Ghosts: {} keywords, {} races, {} actors, {} abilities; excluded: {} keywords, {} races, {} actors",
 			data.ghostKeywords.size(), data.ghostRaces.size(), data.ghostActors.size(), data.ghostSpells.size(),
 			data.excludeKeywords.size(), data.excludeRaces.size(), data.excludeActors.size());
-		logs::info("Ghost weapons: {} keywords, {} weapons/ammo, {} enchantments, {} enchantment effects, {} effect keywords",
-			data.weaponKeywords.size(), data.weapons.size(), data.enchantments.size(), data.enchantmentEffects.size(),
-			data.effectKeywords.size());
+		logs::info("Ghost weapons: {} keywords, {} silver keywords, {} Dawnbreakers, {} weapons/ammo, {} enchantments, {} enchantment effects, {} effect keywords",
+			data.weaponKeywords.size(), data.silverKeywords.size(), data.dawnbreakerWeapons.size(), data.weapons.size(),
+			data.enchantments.size(), data.enchantmentEffects.size(), data.effectKeywords.size());
 		logs::info("Yrden: {} hazards, {} hazard effects, {} reveal effects; magic always allowed with {} keywords",
 			data.hazards.size(), data.hazardEffects.size(), data.revealEffects.size(), data.magicKeywords.size());
 
@@ -298,6 +319,14 @@ namespace Detect
 		if (data.weapons.contains(a_weapon) || HasAny(a_weapon, data.weaponKeywords)) {
 			return true;
 		}
+		const auto& s = Settings::Get();
+		if (s.silverWeapons && HasAny(a_weapon, data.silverKeywords)) {
+			return true;
+		}
+		if (s.dawnbreaker && (data.dawnbreakerWeapons.contains(a_weapon) || data.dawnbreakerEnchantments.contains(a_weapon->formEnchanting) ||
+								 (a_instanceEnchantment && data.dawnbreakerEnchantments.contains(a_instanceEnchantment)))) {
+			return true;
+		}
 		if (a_weapon->IsBound()) {
 			// their enchantment carries the Mystic Binding perk's Turn Undead: decided by the setting alone
 			return Settings::Get().boundWeapons;
@@ -307,13 +336,17 @@ namespace Detect
 
 	bool IsGhostAmmo(const RE::TESAmmo* a_ammo)
 	{
-		return a_ammo && (data.weapons.contains(a_ammo) || HasAny(a_ammo->AsKeywordForm(), data.weaponKeywords));
+		return a_ammo && (data.weapons.contains(a_ammo) || HasAny(a_ammo->AsKeywordForm(), data.weaponKeywords) ||
+							 (Settings::Get().silverWeapons && HasAny(a_ammo->AsKeywordForm(), data.silverKeywords)));
 	}
 
 	bool HandHasGhostWeapon(RE::Actor* a_actor, bool a_leftHand)
 	{
 		if (!a_actor) {
 			return false;
+		}
+		if (Poison::IsCoated(a_actor, a_leftHand)) {
+			return true;  // Spectral Poison
 		}
 		auto* const object = a_actor->GetEquippedObject(a_leftHand);
 		auto* const weapon = object ? object->As<RE::TESObjectWEAP>() : nullptr;

@@ -17,6 +17,8 @@ namespace Settings
 		bool          affectFollowers{ false };  // ghost followers / player teammates
 		bool          affectSummons{ false };    // ghosts summoned by the player or a follower (Karstaag...)
 		MagicImmunity magic{ MagicImmunity::kDamage };
+		bool          silverWeapons{ true };     // silver weapons and ammo ([GhostWeapons] SilverKeywords) are ghost weapons
+		bool          dawnbreaker{ true };       // Dawnbreaker ([GhostWeapons] Dawnbreaker) is a ghost weapon
 		bool          undeadBane{ true };        // weapons with Turn Undead / undead bane enchantments are ghost weapons
 		bool          boundWeapons{ true };      // conjured weapons (Bound Sword, Bow, Battleaxe, Dagger...) are ghost weapons
 		bool          sound{ true };             // the spectral whoosh when an attack passes through
@@ -27,6 +29,9 @@ namespace Settings
 		float         yrdenBelow{ 150.0f };
 		bool          debugLog{ false };
 		std::string   language{ "auto" };        // menu / message language: "auto" = the game's, or english, french...
+		float         poisonDuration{ 12.0f };   // seconds a Spectral Poison coating lasts (no perk changes it)
+		int           vendorPoisons{ 2 };        // Spectral Poisons each apothecary sells (0: none)
+		bool          vendorRecipe{ true };      // apothecaries sell its recipe
 	};
 
 	// Form lists. Entries are "Plugin.esp|0x123456" (local form id) or an editor id (keywords and races always work,
@@ -45,6 +50,8 @@ namespace Settings
 		std::vector<std::string> excludeActors;
 		// ghost weapons
 		std::vector<std::string> weaponKeywords;  // on the weapon or the ammo
+		std::vector<std::string> silverKeywords;  // the same, only with bSilverWeapons
+		std::vector<std::string> dawnbreaker;     // its weapons and enchantments, only with bDawnbreaker
 		std::vector<std::string> weapons;         // weapons and ammo
 		std::vector<std::string> enchantments;
 		std::vector<std::string> enchantmentEffects;
@@ -57,6 +64,9 @@ namespace Settings
 		std::vector<std::string> magicKeywords;
 		// shown on a materialized ghost that had no ghost shader to take off (Wispmothers: their look is in the mesh)
 		std::vector<std::string> revealShaders;
+		// Spectral Poison
+		std::vector<std::string> poisonIngredients;  // brewed from exactly these, one of each
+		std::vector<std::string> poisonShader;       // on the coated weapon while it is drawn
 	};
 
 	void Load();

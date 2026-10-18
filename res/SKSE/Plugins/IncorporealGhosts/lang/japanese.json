@@ -2,7 +2,7 @@
 	"Works as in vanilla": "バニラと同じ",
 	"Damage, drain and stagger do nothing": "ダメージ・吸収・よろめきは無効",
 	"No hostile magic works": "敵対的な魔法はすべて無効",
-	"Silver weapons, Ghostblade and Dawnbreaker always hurt ghosts.": "銀の武器、ゴーストブレード、ドーンブレイカーは常に幽霊を傷つける。",
+	"Ghostblade always hurts ghosts.": "ゴーストブレードは常に幽霊を傷つける。",
 	"ordinary": "通常",
 	"Load a game to see the status.": "ゲームをロードすると状態が表示されます。",
 	"W3S.esl is loaded": "W3S.esl は読み込まれています",
@@ -62,5 +62,16 @@
 	"friendly (solid)": "友好的 (実体)",
 	"revealed (vulnerable)": "暴かれた (弱体)",
 	"in Yrden (vulnerable)": "イャーデン内 (弱体)",
-	"incorporeal": "実体なし"
+	"incorporeal": "実体なし",
+	"Spectral Poison: {:.0f} s": "霊体の毒: {:.0f} 秒",
+	"Spectral Poison": "霊体の毒",
+	"Recipe: Spectral Poison": "レシピ: 霊体の毒",
+	"The spectral coating has faded.": "霊体の毒の効果が消えた。",
+	"{} can strike ghosts for {:.0f} seconds.": "{} は {:.0f} 秒間、幽霊を攻撃できる。",
+	"{} brewed.": "{} を調合した。",
+	"For {:.0f} seconds the poisoned weapon strikes ghosts and Wispmothers as if they had a body.": "{:.0f} 秒間、毒を塗った武器は幽霊とウィスプマザーを実体があるかのように攻撃できる。",
+	"Silver weapons count": "銀の武器を含める",
+	"Every weapon and ammo made of silver (WeapMaterialSilver): Silver Sword, Silver Greatsword, Bloodskal Blade, modded silver weapons.": "銀製のすべての武器と矢弾 (WeapMaterialSilver): シルバーソード、シルバーグレートソード、ブラッドスカルの剣、MOD の銀の武器。",
+	"Dawnbreaker counts": "ドーンブレイカーを含める",
+	"Also when a mod changes its enchantment or adds its own versions of it with the same enchantment (Zim's Immersive Artifacts...).": "MOD が付呪を変えたり、同じ付呪の独自版を追加した場合も含む (Zim's Immersive Artifacts など)。"
 }

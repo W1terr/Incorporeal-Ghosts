@@ -2,7 +2,7 @@
 	"Works as in vanilla": "與原版相同",
 	"Damage, drain and stagger do nothing": "傷害、吸取與踉蹌無效",
 	"No hostile magic works": "所有敵對魔法無效",
-	"Silver weapons, Ghostblade and Dawnbreaker always hurt ghosts.": "銀製武器、幽靈之刃與破曉總能傷害鬼魂。",
+	"Ghostblade always hurts ghosts.": "幽靈之刃總能傷害鬼魂。",
 	"ordinary": "普通",
 	"Load a game to see the status.": "載入遊戲後即可查看狀態。",
 	"W3S.esl is loaded": "已載入 W3S.esl",
@@ -62,5 +62,16 @@
 	"friendly (solid)": "友善（實體）",
 	"revealed (vulnerable)": "已顯形（可受傷）",
 	"in Yrden (vulnerable)": "在亞登中（可受傷）",
-	"incorporeal": "無實體"
+	"incorporeal": "無實體",
+	"Spectral Poison: {:.0f} s": "靈體毒藥：{:.0f} 秒",
+	"Spectral Poison": "靈體毒藥",
+	"Recipe: Spectral Poison": "配方：靈體毒藥",
+	"The spectral coating has faded.": "靈體塗層已消散。",
+	"{} can strike ghosts for {:.0f} seconds.": "{} 在 {:.0f} 秒內可以傷害鬼魂。",
+	"{} brewed.": "已調製 {}。",
+	"For {:.0f} seconds the poisoned weapon strikes ghosts and Wispmothers as if they had a body.": "在 {:.0f} 秒內，塗毒的武器能像擊中實體一樣擊中鬼魂與鬼火之母。",
+	"Silver weapons count": "銀製武器也算",
+	"Every weapon and ammo made of silver (WeapMaterialSilver): Silver Sword, Silver Greatsword, Bloodskal Blade, modded silver weapons.": "所有銀製武器與彈藥（WeapMaterialSilver）：銀劍、銀製巨劍、血骷髏之刃、模組的銀製武器。",
+	"Dawnbreaker counts": "破曉也算",
+	"Also when a mod changes its enchantment or adds its own versions of it with the same enchantment (Zim's Immersive Artifacts...).": "即使模組更改其附魔或加入使用相同附魔的版本也算（Zim's Immersive Artifacts……）。"
 }

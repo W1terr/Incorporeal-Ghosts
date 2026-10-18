@@ -2,7 +2,7 @@
 	"Works as in vanilla": "Działa jak w podstawowej grze",
 	"Damage, drain and stagger do nothing": "Obrażenia, wysysanie i oszołomienie nie działają",
 	"No hostile magic works": "Żadna wroga magia nie działa",
-	"Silver weapons, Ghostblade and Dawnbreaker always hurt ghosts.": "Broń ze srebra, Widmowe Ostrze i Świt zawsze ranią duchy.",
+	"Ghostblade always hurts ghosts.": "Widmowe Ostrze zawsze rani duchy.",
 	"ordinary": "zwykła",
 	"Load a game to see the status.": "Wczytaj grę, aby zobaczyć stan.",
 	"W3S.esl is loaded": "W3S.esl jest wczytany",
@@ -62,5 +62,16 @@
 	"friendly (solid)": "przyjazny (materialny)",
 	"revealed (vulnerable)": "ujawniony (wrażliwy)",
 	"in Yrden (vulnerable)": "w Yrden (wrażliwy)",
-	"incorporeal": "bezcielesny"
+	"incorporeal": "bezcielesny",
+	"Spectral Poison: {:.0f} s": "Widmowa trucizna: {:.0f} s",
+	"Spectral Poison": "Widmowa trucizna",
+	"Recipe: Spectral Poison": "Przepis: widmowa trucizna",
+	"The spectral coating has faded.": "Widmowa powłoka zniknęła.",
+	"{} can strike ghosts for {:.0f} seconds.": "{} może ranić duchy przez {:.0f} sekund.",
+	"{} brewed.": "Uwarzono: {}.",
+	"For {:.0f} seconds the poisoned weapon strikes ghosts and Wispmothers as if they had a body.": "Przez {:.0f} sekund zatruta broń trafia duchy i Matki błędnych ogników, jakby miały ciało.",
+	"Silver weapons count": "Broń ze srebra się liczy",
+	"Every weapon and ammo made of silver (WeapMaterialSilver): Silver Sword, Silver Greatsword, Bloodskal Blade, modded silver weapons.": "Każda broń i amunicja ze srebra (WeapMaterialSilver): srebrny miecz, srebrny miecz dwuręczny, Ostrze Bloodskal, srebrna broń z modów.",
+	"Dawnbreaker counts": "Świt się liczy",
+	"Also when a mod changes its enchantment or adds its own versions of it with the same enchantment (Zim's Immersive Artifacts...).": "Także gdy mod zmienia jego zaklęcie lub dodaje własne wersje z tym samym zaklęciem (Zim's Immersive Artifacts...)."
 }

@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCES = [ROOT / "src" / n for n in ("Menu.cpp", "main.cpp", "Detect.cpp", "Ghosts.cpp")]
+SOURCES = [ROOT / "src" / n for n in ("Menu.cpp", "main.cpp", "Poison.cpp", "Detect.cpp", "Ghosts.cpp")]
 LANG_DIR = ROOT / "res" / "SKSE" / "Plugins" / "IncorporealGhosts" / "lang"
 LANGUAGES = ["french", "german", "italian", "spanish", "polish", "russian", "japanese", "chinese"]
 LIT = r'"((?:[^"\\]|\\.)*)"'
@@ -22,7 +22,7 @@ def code_keys():
     for src in SOURCES:
         text = src.read_text(encoding="utf-8")
         found = []
-        if src.name in ("Menu.cpp", "main.cpp"):
+        if src.name in ("Menu.cpp", "main.cpp", "Poison.cpp"):
             for call in ("T", "F", "Id", "Hint", "Heading", "WeaponLine"):
                 found += re.findall(r"\b" + call + r"\(\s*" + LIT, text)
             found += re.findall(r"Verdict\([^\n]*,\s*" + LIT + r"\);", text)

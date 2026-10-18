@@ -2,6 +2,7 @@
 
 #include "Feedback.h"
 #include "Ghosts.h"
+#include "Poison.h"
 #include "Visuals.h"
 #include "Yrden.h"
 
@@ -191,6 +192,7 @@ namespace Hooks
 				Yrden::Update(a_delta);
 				Feedback::Update();
 				Visuals::Update(a_delta);
+				Poison::Update(a_delta);
 			}
 			static inline REL::Relocation<decltype(thunk)> func;
 		};
