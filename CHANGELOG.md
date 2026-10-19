@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1
+
+- The Witcher Signs is optional: it is no longer a master of IncorporealGhosts.esp. Without it there is no Yrden, and
+  ghost weapons and Spectral Poison are the ways to hurt ghosts; with it, Yrden works as before
+- No "The Witcher Signs is missing" message on loading a game any more
+
 ## 2.0
 
 - Spectral Poison: coat your weapon and for 12 seconds it hurts ghosts anywhere (melee, and arrows from a coated bow).

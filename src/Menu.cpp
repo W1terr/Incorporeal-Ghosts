@@ -144,7 +144,7 @@ namespace Menu
 			if (Forms::WitcherSignsLoaded()) {
 				TextColored(kGood, "%s", T("W3S.esl is loaded"));
 			} else {
-				TextColored(kWarn, "%s", T("W3S.esl is not loaded: only ghost weapons hurt ghosts"));
+				TextColored(kWarn, "%s", T("W3S.esl is not loaded: no Yrden (optional), ghost weapons and Spectral Poison still work"));
 			}
 			const auto zones = Yrden::Zones();
 			if (zones.empty()) {

@@ -31,7 +31,7 @@ namespace Forms
 		}
 		witcherSigns = data->LookupModByName(kWitcherSigns) != nullptr;
 		if (!witcherSigns) {
-			logs::warn("The Witcher Signs ({}) is not loaded: only ghost weapons can hurt ghosts", kWitcherSigns);
+			logs::info("The Witcher Signs ({}) is not loaded: no Yrden, ghost weapons and Spectral Poison still work", kWitcherSigns);
 		}
 	}
 

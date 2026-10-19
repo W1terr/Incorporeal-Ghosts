@@ -1,5 +1,5 @@
-"""Writes IncorporealGhosts.esp (ESL flagged, masters Skyrim.esm and W3S.esl - The Witcher Signs is required -, no
-edits to other records):
+"""Writes IncorporealGhosts.esp (ESL flagged, master Skyrim.esm only - The Witcher Signs is optional, the DLL finds its
+Yrden at runtime -, no edits to other records):
 
   KYWD  IG_GhostWeapon       weapons / ammo with it hurt incorporeal ghosts (like silver)
   KYWD  IG_Incorporeal       actors / races with it are incorporeal ghosts
@@ -21,7 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "res" / "IncorporealGhosts.esp"
 SOUNDS = ROOT / "res" / "Sound" / "FX" / "IncorporealGhosts"
-OWN = 0x02000000  # this plugin (two masters)
+OWN = 0x01000000  # this plugin (one master)
 
 # Skyrim.esm forms
 CATEGORY_SFX = 0x172A1           # AudioCategorySFX (the "Effects" volume slider)
@@ -168,7 +168,6 @@ def main():
         sub("CNAM", "W1ter"),
         sub("SNAM", "Incorporeal Ghosts"),
         sub("MAST", "Skyrim.esm"), sub("DATA", b"\0" * 8),
-        sub("MAST", "W3S.esl"), sub("DATA", b"\0" * 8),
     ], flags=0x200)  # ESL
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_bytes(header + body)

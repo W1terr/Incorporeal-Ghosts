@@ -15,7 +15,7 @@ add_requires("nlohmann_json")
 
 -- define targets
 target("IncorporealGhosts")
-    set_version("2.0.0")
+    set_version("2.1.0")
     add_rules("commonlibsse-ng.plugin", {
         name = "IncorporealGhosts",
         author = "W1ter",

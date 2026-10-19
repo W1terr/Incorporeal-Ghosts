@@ -12,8 +12,6 @@ namespace
 {
 	constexpr std::uint32_t kSaveID = 'IGHO';
 
-	bool warned = false;
-
 	void OnSave(SKSE::SerializationInterface* a_intfc) { Visuals::Save(a_intfc); }
 
 	void OnLoad(SKSE::SerializationInterface* a_intfc)
@@ -47,10 +45,6 @@ namespace
 		case SKSE::MessagingInterface::kNewGame:
 			Yrden::Reset();
 			Poison::Reset();
-			if (!warned && !Forms::WitcherSignsLoaded()) {
-				warned = true;
-				RE::SendHUDMessage::ShowHUDMessage(Lang::T("Incorporeal Ghosts: The Witcher Signs is missing, only ghost weapons can hurt ghosts."));
-			}
 			break;
 		default:
 			break;
